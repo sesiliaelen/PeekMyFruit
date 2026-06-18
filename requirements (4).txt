@@ -1,0 +1,6 @@
+# requirements.txt untuk Hugging Face Spaces (hanya yang dibutuhkan web app)
+flask
+gunicorn
+pillow
+numpy
+tensorflow-cpu
