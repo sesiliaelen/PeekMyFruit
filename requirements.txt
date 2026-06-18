@@ -1,0 +1,12 @@
+# PeekMyFruit - Dependencies
+# Disarankan Python 3.10 - 3.12
+
+tensorflow>=2.16          # Keras 3 sudah jadi default di TF 2.16+
+numpy>=1.26
+scikit-learn>=1.4         # train_test_split, LabelEncoder, metrics
+matplotlib>=3.8           # plot training history
+seaborn>=0.13            # heatmap confusion matrix
+pillow>=10.0             # load/resize gambar untuk inferensi
+
+# Opsional - hanya untuk download dataset dari Kaggle via CLI
+# kaggle>=1.6
