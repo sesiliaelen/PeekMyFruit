@@ -1,4 +1,4 @@
-# 🍎🍌🍊 PeekMyFruit
+🍎🍌🍊 PeekMyFruit
 
 Model AI untuk mendeteksi tingkat kematangan buah (**Unripe / Ripe / Rotten**)
 dari gambar, menggunakan **MobileNetV2 transfer learning** (TensorFlow/Keras).
@@ -8,7 +8,7 @@ Buah yang didukung: Apple, Banana, Orange — semuanya digabung ke dalam
 
 ---
 
-## 📁 Struktur Folder
+📁 Struktur Folder
 
 ```
 PeekMyFruit/
@@ -38,48 +38,48 @@ PeekMyFruit/
 
 ---
 
-## 🚀 Cara Pakai
+Cara Pakai
 
-### 1. Setup environment
+1. Setup environment
 ```bash
 python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Siapkan dataset
+2. Siapkan dataset
 Download dataset Kaggle *"Fruit Ripeness: Unripe, Ripe and Rotten"*,
 lalu unzip semua isinya ke dalam folder `data/raw/`.
 
 Struktur folder asli tidak masalah — `preprocess.py` membaca kata kunci
 `unripe` / `ripe` / `rotten` dari nama folder/file untuk menentukan kelas.
 
-### 3. Preprocessing + split
+3. Preprocessing + split
 ```bash
 python src/preprocess.py
 ```
 
-### 4. Training
+4. Training
 ```bash
 python src/train.py
 ```
 Menghasilkan `models/peekmyfruit_model.keras`, label encoder, dan
 `outputs/training_history.png`.
 
-### 5. Evaluasi
+5. Evaluasi
 ```bash
 python src/evaluate.py
 ```
 Menampilkan Accuracy, Precision, Recall, F1, dan Confusion Matrix.
 
-### 6. Prediksi 1 gambar
+6. Prediksi 1 gambar
 ```bash
 python src/predict.py --image contoh.jpg
 ```
 
 ---
 
-## 🧠 Catatan Teknis (best practice)
+🧠 Catatan Teknis (best practice)
 
 - **Preprocessing di dalam model**: layer `preprocess_input` MobileNetV2
   ditanam ke dalam model, jadi `predict.py` cukup memberi gambar mentah
